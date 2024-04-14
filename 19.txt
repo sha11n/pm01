@@ -1,0 +1,56 @@
+1)
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number;
+    int count = 0;
+    int sum = 0;
+
+    cout << "Введите числа (для завершения введите 0):\n";
+
+    do {
+        cin >> number;
+        if (number != 0) {
+            count++;
+            sum += number;
+        }
+    } while (number != 0);
+
+    if (count > 0) {
+        double average = static_cast<double>(sum) / count;
+        cout << "Количество чисел: " << count << endl;
+        cout << "Общая сумма: " << sum << endl;
+        cout << "Среднее арифметическое: " << average << endl;
+    }
+    else {
+        cout << "Вы не ввели ни одного числа, выход из программы." << endl;
+    }
+
+    return 0;
+}
+
+2)
+using System;
+using System.Diagnostics;
+
+
+class Program
+{
+    static void Main()
+    {
+        int x, y;
+	Console.WriteLine("Введите числа х");
+	x = Convert.ToInt32(Console.ReadLine());
+	Console.WriteLine("Введите числа у");
+	y = Convert.ToInt32(Console.ReadLine());
+	if(x > y)
+	{
+    	Console.WriteLine($"Максимальное число {x}");
+	}
+	else
+	{
+   	 Console.WriteLine($"Максимальное число {y}");
+	}
+    }
+}

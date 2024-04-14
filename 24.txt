@@ -1,0 +1,39 @@
+1)
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+ int first = 4; 
+ int second = first + 3; 
+ int third = first + second; 
+ 
+ cout << "first = " << first << endl;
+ cout << "second = " << second << endl;
+ cout << "third = " << third << endl;
+ 
+ return 0;
+}
+
+2)
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double x, f;
+	Console.WriteLine("Введите число x:");
+	x = Convert.ToDouble(Console.ReadLine());
+	if (x  > 3)
+	{
+    		f = -3 * x + 9;
+    		Console.WriteLine($"Ответ: {f}");
+	}
+	else
+	{
+    		f = Math.Pow(x, 3) / (Math.Pow(x, 2) + 8);
+    		Console.WriteLine($"Ответ: {f}");
+	}
+    }
+}

@@ -1,0 +1,63 @@
+1)
+#include <iostream>
+#include <limits>
+using namespace std;
+
+int main() {
+    int numVisitors;
+    int age;
+    int minAge = numeric_limits<int>::max();
+    int maxAge = numeric_limits<int>::min();
+    int totalAge = 0;
+
+    cout << "Введите количество посетителей спортзала за день: ";
+    cin >> numVisitors;
+
+    if (numVisitors <= 0) {
+        cout << "Некорректное количество посетителей. Программа завершена.\n";
+        return 1;
+    }
+
+    for (int i = 0; i < numVisitors; ++i) {
+        cout << "Введите возраст посетителя " << i + 1 << ": ";
+        cin >> age;
+
+        totalAge += age;
+
+        if (age < minAge) {
+            minAge = age;
+        }
+
+        if (age > maxAge) {
+            maxAge = age;
+        }
+    }
+
+    double averageAge = static_cast<double>(totalAge) / numVisitors;
+
+    cout << "Самый молодой посетитель: " << minAge << " лет\n";
+    cout << "Самый старший посетитель: " << maxAge << " лет\n";
+    cout << "Средний возраст посетителей: " << averageAge << " лет\n";
+
+    return 0;
+}
+
+
+2)
+using System;
+using System.Diagnostics;
+
+
+class Program
+{
+    static void Main()
+    {
+        double x, y,a;
+	Console.WriteLine("Введите число х");
+	x = Convert.ToDouble(Console.ReadLine());
+	Console.WriteLine("Введите число y");
+	y = Convert.ToDouble(Console.ReadLine());
+	a = ((Math.Sin(x) + Math.Cos(y)) / (Math.Cos(x) - Math.Sin(y))) * Math.Tan(x*y);
+	Console.WriteLine($"Ответ: = {a}");
+    }
+}
