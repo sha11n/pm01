@@ -1,0 +1,64 @@
+1)
+#include <iostream>
+#include <cstdlib> // Для функции rand()
+#include <ctime>   // Для функции time()
+
+using namespace std;
+
+int main() {
+    // Переменные для хранения введенных пользователем чисел и ответа
+    int num1, num2, userAnswer;
+
+    // Генерация двух случайных однозначных чисел
+    srand(time(NULL));
+    num1 = rand() % 9 + 1;
+    num2 = rand() % 9 + 1;
+
+    // Вычисление правильного ответа
+    int correctAnswer = num1 * num2;
+
+    // Задание вопроса пользователю
+    cout << "Сколько будет " << num1 << " умножить на " << num2 << "? ";
+    cin >> userAnswer;
+
+    // Проверка ответа пользователя
+    if (userAnswer == correctAnswer) {
+        cout << "Верно! Поздравляем!" << endl;
+    } else {
+        cout << "Неправильно. Правильный ответ: " << correctAnswer << endl;
+    }
+
+    return 0;
+}
+
+2)
+using System;
+
+namespace MaxValues
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Запрашиваем числа у пользователя
+            Console.WriteLine("Введите первое число:");
+            double x = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Введите второе число:");
+            double y = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Введите третье число:");
+            double z = double.Parse(Console.ReadLine());
+
+            // Вычисляем максимальное значение из суммы чисел
+            double maxSum = Math.Max(x + y + z, Math.Max(x + y, x + z));
+
+            // Вычисляем максимальное значение из произведения чисел
+            double maxProduct = Math.Max(x * y * z, Math.Max(x * y, x * z));
+
+            // Выводим результаты на консоль
+            Console.WriteLine("Максимальное значение из суммы чисел: {0}", maxSum);
+            Console.WriteLine("Максимальное значение из произведения чисел: {0}", maxProduct);
+        }
+    }
+}

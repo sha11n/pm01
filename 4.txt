@@ -1,0 +1,72 @@
+1)
+#include <iostream>
+using namespace std;
+
+int main() {
+    int int_var;
+    float float_var;
+    char char_var;
+    bool bool_var;
+
+    cout << "Введите целое число: ";
+    cin >> int_var;
+
+    cout << "Введите дробное число: ";
+    cin >> float_var;
+
+    cout << "Введите символ: ";
+    cin >> char_var;
+
+    cout << "Введите булево значение (0 или 1): ";
+    cin >> bool_var;
+
+    cout << "Введенные значения:" << endl;
+    cout << "Целое число: " << int_var << endl;
+    cout << "Дробное число: " << float_var << endl;
+    cout << "Символ: " << char_var << endl;
+    cout << "Булевое значение: " << bool_var << endl;
+
+    return 0;
+}
+
+2)
+using System;
+
+namespace AngleConverter
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Запрашиваем угол в радианах у пользователя
+            Console.WriteLine("Введите угол в радианах:");
+            double radians = double.Parse(Console.ReadLine());
+
+            // Переводим радианы в градусы, минуты и секунды
+            double degrees = radians * 180 / Math.PI;
+            double minutes = (degrees - Math.Truncate(degrees)) * 60;
+            double seconds = (minutes - Math.Truncate(minutes)) * 60;
+
+            // Выводим результат на консоль
+            Console.WriteLine("Угол в градусах: {0}°", Math.Truncate(degrees));
+            Console.WriteLine("Угол в минутах: {0}'", Math.Truncate(minutes));
+            Console.WriteLine("Угол в секундах: {0}\"", Math.Truncate(seconds));
+
+            // Запрашиваем угол в градусах, минутах и секундах у пользователя
+            Console.WriteLine();
+            Console.WriteLine("Введите угол в градусах, минутах и секундах:");
+            Console.Write("Градусы: ");
+            int degreesInput = int.Parse(Console.ReadLine());
+            Console.Write("Минуты: ");
+            int minutesInput = int.Parse(Console.ReadLine());
+            Console.Write("Секунды: ");
+            int secondsInput = int.Parse(Console.ReadLine());
+
+            // Переводим градусы, минуты и секунды в радианы
+            double radiansOutput = (degreesInput + minutesInput / 60.0 + secondsInput / 3600.0) * Math.PI / 180;
+
+            // Выводим результат на консоль
+            Console.WriteLine("Угол в радианах: {0} рад", radiansOutput);
+        }
+    }
+}

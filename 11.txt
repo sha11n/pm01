@@ -1,0 +1,71 @@
+1)
+#include <iostream>
+using namespace std;
+
+int main() {
+    int fingerNumber;
+
+    cout << "Введите порядковый номер пальца руки (1-5): ";
+    cin >> fingerNumber;
+
+    switch (fingerNumber) {
+        case 1:
+            cout << "Большой палец" << endl;
+            break;
+        case 2:
+            cout << "Указательный палец" << endl;
+            break;
+        case 3:
+            cout << "Средний палец" << endl;
+            break;
+        case 4:
+            cout << "Безымянный палец" << endl;
+            break;
+        case 5:
+            cout << "Мизинец" << endl;
+            break;
+        default:
+            cout << "Некорректный ввод" << endl;
+    }
+
+    return 0;
+}
+
+2)
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Введите целочисленную последовательность, разделяя элементы пробелом:");
+        string input = Console.ReadLine();
+        string[] numbers = input.Split(' ');
+
+        int zeroCount = 0;
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            if (int.Parse(numbers[i]) == 0)
+            {
+                zeroCount++;
+            }
+        }
+
+        int[] zeroIndexes = new int[zeroCount];
+        int index = 0;
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            if (int.Parse(numbers[i]) == 0)
+            {
+                zeroIndexes[index] = i;
+                index++;
+            }
+        }
+
+        Console.WriteLine("Номера нулевых элементов:");
+        foreach (int zeroIndex in zeroIndexes)
+        {
+            Console.Write(zeroIndex + " ");
+        }
+    }
+}

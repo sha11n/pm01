@@ -1,0 +1,90 @@
+1)
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    // Объявление переменных для количества чашек, блюдец и ложек
+    int cups, saucers, spoons;
+
+    // Запрос у пользователя ввода количества чашек
+    cout << "Введите количество чашек: ";
+    cin >> cups;
+
+    // Запрос у пользователя ввода количества блюдец
+    cout << "Введите количество блюдец: ";
+    cin >> saucers;
+
+    // Запрос у пользователя ввода количества ложек
+    cout << "Введите количество ложек: ";
+    cin >> spoons;
+
+    // Вычисление общего количества предметов для сервировки стола
+    int total_items = cups + saucers + spoons;
+
+    // Вывод общего количества предметов
+    cout << "Общее количество предметов для сервировки стола: " << total_items << endl;
+
+    return 0;
+}
+
+2)
+using System;
+
+namespace DateInfo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Запрашиваем год и номер месяца у пользователя
+            Console.WriteLine("Введите год:");
+            int year = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Введите номер месяца:");
+            int month = int.Parse(Console.ReadLine());
+
+            // Вычисляем полугодие
+            int halfYear = month <= 6 ? 1 : 2;
+
+            // Вычисляем квартал
+            int quarter = (month - 1) / 3 + 1;
+
+            // Вычисляем время года
+            string season;
+            if (month >= 3 && month <= 5)
+            {
+                season = "весна";
+            }
+            else if (month >= 6 && month <= 8)
+            {
+                season = "лето";
+            }
+            else if (month >= 9 && month <= 11)
+            {
+                season = "осень";
+            }
+            else
+            {
+                season = "зима";
+            }
+
+            // Вычисляем столетие
+            int century = (year - 1) / 100 + 1;
+
+            // Вычисляем тысячелетие
+            int millennium = (year - 1) / 1000 + 1;
+
+            // Проверяем, високосный ли это год
+            bool isLeapYear = year % 4 == 0 && (year % 100 != 0 || year % 400 == 0);
+
+            // Выводим результат на консоль
+            Console.WriteLine("Полугодие: {0}", halfYear);
+            Console.WriteLine("Квартал: {0}", quarter);
+            Console.WriteLine("Время года: {0}", season);
+            Console.WriteLine("Столетие: {0}", century);
+            Console.WriteLine("Тысячелетие: {0}", millennium);
+            Console.WriteLine("Високосный год: {0}", isLeapYear);
+        }
+    }
+}

@@ -1,0 +1,29 @@
+1)
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    double num1, num2;
+    
+    cout << "Введите первое число: ";
+    cin >> num1;
+    
+    cout << "Введите второе число: ";
+    cin >> num2;
+    
+    double product = num1 * num2;
+    double sum = num1 + num2;
+    double difference = num1 - num2;
+    double average = (num1 + num2) / 2;
+    
+    cout << "Произведение: " << product << endl;
+    cout << "Сумма: " << sum << endl;
+    cout << "Разница: " << difference << endl;
+    cout << "Среднее арифметическое: " << average << endl;
+    
+    return 0;
+}
+
+2)
+ошибку выдает не нашел

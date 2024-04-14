@@ -1,0 +1,47 @@
+1)
+#include <iostream>
+using namespace std;
+
+int main() {
+    int totalBoxes = 15;
+    int currentBox = 1;
+    
+    while (totalBoxes > 0) {
+        int boxesToLoad;
+        
+        cout << "Сколько ящиков загрузить в " << currentBox << " машину? ";
+        cin >> boxesToLoad;
+        
+        if (boxesToLoad > totalBoxes) {
+            cout << "На складе нет такого количества ящиков. Осталось только " << totalBoxes << " ящиков.\n";
+            continue;
+        }
+        
+        totalBoxes -= boxesToLoad;
+        currentBox++;
+    }
+    
+    cout << "Все ящики с яблоками загружены.\n";
+    
+    return 0;
+}
+
+2)
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите натуральное число N: ");
+        int N = int.Parse(Console.ReadLine());
+
+        double S = 0;
+        for (int n = 0; n <= N; n++)
+        {
+            S += Math.Pow(-1, n) * 1.0 / Math.Pow(2, n);
+        }
+
+        Console.WriteLine($"Значение S для N={N}: {S}");
+    }
+}

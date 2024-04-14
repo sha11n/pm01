@@ -1,0 +1,72 @@
+1) переменные сами переведете потом на англ язык можно и не переводить один хрен компилируется
+#include <iostream>
+using namespace std;
+
+int main() {
+    double депозит, месяцы;
+    const double годоваяСтавка = 0.05;
+    const int днейВГоду = 365;
+    const int днейВМесяце = 30;
+
+    cout << "Введите сумму депозита в USD: ";
+    cin >> депозит;
+
+    cout << "Введите количество месяцев, на которые деньги будут находиться в банке: ";
+    cin >> месяцы;
+
+    double ежемесячнаяПрибыль = депозит * (годоваяСтавка / 100) / днейВГоду * днейВМесяце;
+    double общаяПрибыль = ежемесячнаяПрибыль * месяцы;
+    double общаяСумма = депозит + общаяПрибыль;
+
+    cout << "Ежемесячная прибыль от депозита: $" << ежемесячнаяПрибыль << endl;
+    cout << "Общая прибыль от депозита за " << месяцы << " месяцев: $" << общаяПрибыль << endl;
+    cout << "Общая сумма к выплате в конце срока: $" << общаяСумма << endl;
+
+    return 0;
+}
+
+2)
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        for (int d = 1; d <= 9; d++)
+        {
+            for (int r = 0; r <= 9; r++)
+            {
+                if (r == d) continue;
+                for (int u = 0; u <= 9; u++)
+                {
+                    if (u == d || u == r) continue;
+                    for (int g = 0; g <= 9; g++)
+                    {
+                        if (g == d || g == r || g == u) continue;
+                        int number1 = d * 1000 + r * 100 + u * 10 + g;
+
+                        for (int g2 = 0; g2 <= 9; g2++)
+                        {
+                            if (g2 == d || g2 == r || g2 == u || g2 == g) continue;
+                            for (int u2 = 0; u2 <= 9; u2++)
+                            {
+                                if (u2 == d || u2 == r || u2 == u || u2 == g || u2 == g2) continue;
+                                for (int r2 = 0; r2 <= 9; r2++)
+                                {
+                                    if (r2 == d || r2 == r || r2 == u || r2 == g || r2 == g2 || r2 == u2) continue;
+                                    int number2 = g * 1000 + u * 100 + r * 10 + d;
+
+                                    if (number1 - number2 == 2727)
+                                    {
+                                        Console.WriteLine("D = {0}, R = {1}, U = {2}, G = {3}", d, r, u, g);
+                                        Console.WriteLine("G = {0}, U = {1}, R = {2}, D = {3}", g, u, r, d);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

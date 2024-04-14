@@ -1,0 +1,56 @@
+1)
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int first_var = 5;
+    int second_var = first_var + 3;
+    int third_var = first_var + second_var;
+
+    cout << "Первая переменная: " << first_var << endl;
+    cout << "Вторая переменная: " << second_var << endl;
+    cout << "Третья переменная: " << third_var << endl;
+
+    return 0;
+}
+
+2)
+using System;
+
+namespace QuadraticEquationRoots
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Запрашиваем коэффициенты уравнения у пользователя
+            Console.WriteLine("Введите коэффициент a:");
+            double a = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Введите коэффициент b:");
+            double b = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Введите коэффициент c:");
+            double c = double.Parse(Console.ReadLine());
+
+            // Вычисляем дискриминант
+            double discriminant = b * b - 4 * a * c;
+
+            // Проверяем, что дискриминант неотрицательный
+            if (discriminant < 0)
+            {
+                Console.WriteLine("Дискриминант отрицательный, корней нет.");
+                return;
+            }
+
+            // Вычисляем корни уравнения
+            double x1 = (-b + Math.Sqrt(discriminant)) / (2 * a);
+            double x2 = (-b - Math.Sqrt(discriminant)) / (2 * a);
+
+            // Выводим корни на консоль
+            Console.WriteLine("Корень 1: {0}", x1);
+            Console.WriteLine("Корень 2: {0}", x2);
+        }
+    }
+}

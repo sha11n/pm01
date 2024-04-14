@@ -1,0 +1,70 @@
+1)
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    while (true) {
+        int number;
+        
+        cout << "Введите число: ";
+        cin >> number;
+        
+        cout << "Квадрат числа: " << number * number << endl;
+        
+        char choice;
+        cout << "Хотите продолжить? (y/n): ";
+        cin >> choice;
+        
+        if (choice != 'y') {
+            break;
+        }
+    }
+    
+    return 0;
+}
+
+2)
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите количество чисел в последовательности: ");
+        int n = int.Parse(Console.ReadLine());
+
+        int firstPositive = 0;
+        int firstNegative = 0;
+
+        for (int i = 1; i <= n; i++)
+        {
+            Console.Write($"Введите число {i}: ");
+            int number = int.Parse(Console.ReadLine());
+
+            if (number > 0)
+            {
+                firstPositive = i;
+                break;
+            }
+            else if (number < 0)
+            {
+                firstNegative = i;
+                break;
+            }
+        }
+
+        if (firstPositive != 0)
+        {
+            Console.WriteLine($"Первое положительное число встречается раньше на позиции {firstPositive}");
+        }
+        else if (firstNegative != 0)
+        {
+            Console.WriteLine($"Первое отрицательное число встречается раньше на позиции {firstNegative}");
+        }
+        else
+        {
+            Console.WriteLine("В последовательности нет ни положительных, ни отрицательных чисел");
+        }
+    }
+}

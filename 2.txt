@@ -1,0 +1,77 @@
+1)
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+
+const int ROWS = 5;
+const int COLS = 5;
+
+int main() {
+    int matrix[ROWS][COLS];
+    srand(time(0));
+
+    // Заполнение двумерного массива случайными числами от 10 до 100
+    for (int i = 0; i < ROWS; ++i) {
+        for (int j = 0; j < COLS; ++j) {
+            matrix[i][j] = rand() % 91 + 10; // Генерация чисел от 10 до 100
+        }
+    }
+
+    // Печать заполненного массива
+    std::cout << "Массив:\n";
+    for (int i = 0; i < ROWS; ++i) {
+        for (int j = 0; j < COLS; ++j) {
+            std::cout << matrix[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    // Поиск строки с максимальной суммой элементов
+    int max_sum = 0;
+    int max_sum_row = 0;
+    for (int i = 0; i < ROWS; ++i) {
+        int row_sum = 0;
+        for (int j = 0; j < COLS; ++j) {
+            row_sum += matrix[i][j];
+        }
+        if (row_sum > max_sum) {
+            max_sum = row_sum;
+            max_sum_row = i;
+        }
+    }
+
+    std::cout << "Строка с максимальной суммой элементов: " << max_sum_row + 1 << std::endl;
+
+    return 0;
+}
+
+2)
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Ввод данных о треугольной пирамиде
+        Console.WriteLine("Введите длину одного из ребер треугольной пирамиды:");
+        double edgeLength = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Введите высоту боковой грани треугольной пирамиды:");
+        double sideHeight = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Введите высоту треугольной пирамиды (расстояние от вершины до основания):");
+        double pyramidHeight = Convert.ToDouble(Console.ReadLine());
+
+        // Вычисление площади боковых граней
+        double sideArea = 0.5 * edgeLength * sideHeight;
+
+        // Вычисление площади основания
+        double baseArea = 0.5 * edgeLength * pyramidHeight;
+
+        // Вычисление полной площади поверхности пирамиды
+        double totalSurfaceArea = 4 * sideArea + baseArea;
+
+        // Вывод результата
+        Console.WriteLine($"Площадь полной поверхности треугольной пирамиды: {totalSurfaceArea}");
+    }
+}

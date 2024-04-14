@@ -1,0 +1,42 @@
+1)
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    // Переменные для хранения пяти символов
+    char char1, char2, char3, char4, char5;
+
+    // Запрос у пользователя ввода пяти символов
+    cout << "Введите пятибуквенное слово: ";
+    cin >> char1 >> char2 >> char3 >> char4 >> char5;
+
+    // Вывод введенных символов (слова) на экран
+    cout << "Вы ввели: " << char1 << char2 << char3 << char4 << char5 << endl;
+
+    return 0;
+}
+
+2)
+using System;
+
+namespace DayOfYear
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Запрашиваем номер дня у пользователя
+            Console.WriteLine("Введите номер дня:");
+            int dayOfYear = int.Parse(Console.ReadLine());
+
+            // Вычисляем месяц и число
+            int month = (dayOfYear - 1) / 31 + 1;
+            int day = dayOfYear - (month - 1) * 31;
+
+            // Выводим результат на консоль
+            Console.WriteLine("Месяц: {0}", month);
+            Console.WriteLine("Число: {0}", day);
+        }
+    }
+}

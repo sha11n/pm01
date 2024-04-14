@@ -1,0 +1,51 @@
+1)
+#include <iostream>
+
+using namespace std;
+int main() {
+    float price_chocolate, price_coffee, price_milk;
+    int quantity_chocolate, quantity_coffee, quantity_milk;
+
+    cout << "Введите цену за плитку шоколада: ";
+    cin >> price_chocolate;
+    cout << "Введите количество плиток шоколада: ";
+    cin >> quantity_chocolate;
+
+    cout << "Введите цену за упаковку кофе: ";
+    cin >> price_coffee;
+    cout << "Введите количество упаковок кофе: ";
+    cin >> quantity_coffee;
+
+    cout << "Введите цену за пакет молока: ";
+    cin >> price_milk;
+    cout << "Введите количество пакетов молока: ";
+    cin >> quantity_milk;
+
+    float total_cost = (price_chocolate * quantity_chocolate) + (price_coffee * quantity_coffee) + (price_milk * quantity_milk);
+
+    cout << "Общая сумма покупки: " << total_cost << " рублей" << endl;
+
+    return 0;
+}
+
+2)
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Переменная для хранения значения x
+        double x;
+
+        // Ввод значения x пользователем
+        Console.Write("Введите значение x: ");
+        x = Convert.ToDouble(Console.ReadLine());
+
+        // Вычисление выражения 2x^4 - 3x^3 + 4x^2 - 5x + 6
+        double result = 2 * Math.Pow(x, 4) - 3 * Math.Pow(x, 3) + 4 * Math.Pow(x, 2) - 5 * x + 6;
+
+        // Вывод результата
+        Console.WriteLine($"Результат вычисления выражения: {result}");
+    }
+}

@@ -1,0 +1,46 @@
+1)
+#include <iostream>
+using namespace std;
+
+int main() {
+    int fingerNumber;
+
+    cout << "Введите порядковый номер пальца руки (1-5): ";
+    cin >> fingerNumber;
+
+    switch (fingerNumber) {
+        case 1:
+            cout << "Большой палец" << endl;
+            break;
+        case 2:
+            cout << "Указательный палец" << endl;
+            break;
+        case 3:
+            cout << "Средний палец" << endl;
+            break;
+        case 4:
+            cout << "Безымянный палец" << endl;
+            break;
+        case 5:
+            cout << "Мизинец" << endl;
+            break;
+        default:
+            cout << "Некорректный ввод" << endl;
+    }
+
+    return 0;
+
+2)
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Введите значение x:");
+        double x = Convert.ToDouble(Console.ReadLine());
+
+        double result = (Math.Pow(x, 2) - 7 * x + 10) / (Math.Pow(x, 2) - 8 * x + 12);
+        Console.WriteLine($"Результат выражения (x^2 - 7x + 10) / (x^2 - 8x + 12) при x={x} равен {result}");
+    }
+}

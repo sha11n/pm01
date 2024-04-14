@@ -1,0 +1,68 @@
+1)
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    // Переменные для хранения введенных пользователем чисел
+    double num1, num2;
+
+    // Ввод двух чисел пользователем
+    cout << "Введите первое число: ";
+    cin >> num1;
+    cout << "Введите второе число: ";
+    cin >> num2;
+
+    // Вычисление произведения, суммы и разности введенных чисел
+    double product = num1 * num2;
+    double sum = num1 + num2;
+    double difference = num1 - num2;
+
+    // Вычисление среднего арифметического
+    double average = (num1 + num2) / 2;
+
+    // Вывод результатов
+    cout << "Произведение чисел: " << product << endl;
+    cout << "Сумма чисел: " << sum << endl;
+    cout << "Разность чисел: " << difference << endl;
+    cout << "Среднее арифметическое: " << average << endl;
+
+    return 0;
+}
+
+2)
+using System;
+
+namespace BookStore
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Запрашиваем стоимость книг у пользователя
+            Console.WriteLine("Введите стоимость книг:");
+            double cost = double.Parse(Console.ReadLine());
+
+            // Запрашиваем сумму, внесенную покупателем, у пользователя
+            Console.WriteLine("Введите сумму, внесенную покупателем:");
+            double payment = double.Parse(Console.ReadLine());
+
+            // Вычисляем сдачу
+            double change = payment - cost;
+
+            // Выводим сообщение на экран
+            if (change == 0)
+            {
+                Console.WriteLine("Спасибо!");
+            }
+            else if (change > 0)
+            {
+                Console.WriteLine("Возьмите сдачу: {0}", change);
+            }
+            else
+            {
+                Console.WriteLine("Недостаточно денег. Необходимо доплатить: {0}", -change);
+            }
+        }
+    }
+}
