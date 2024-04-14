@@ -26,4 +26,58 @@ int main() {
 }
 
 2)
-ошибку выдает не нашел
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        for (int m = 1; m <= 9; m++)
+        {
+            for (int u = 0; u <= 9; u++)
+            {
+                if (u == m) continue;
+
+                for (int h = 0; h <= 9; h++)
+                {
+                    if (h == m || h == u) continue;
+
+                    for (int a = 0; a <= 9; a++)
+                    {
+                        if (a == m || a == u || a == h) continue;
+
+                        for (int s = 1; s <= 9; s++)
+                        {
+                            if (s == m || s == u || s == h || s == a) continue;
+
+                            for (int l = 0; l <= 9; l++)
+                            {
+                                if (l == m || l == u || l == h || l == a || l == s) continue;
+
+                                for (int o = 0; o <= 9; o++)
+                                {
+                                    if (o == m || o == u || o == h || o == a || o == s || o == l) continue;
+
+                                    for (int n = 0; n <= 9; n++)
+                                    {
+                                        if (n == m || n == u || n == h || n == a || n == s || n == l || n == o) continue;
+
+                                        int muha = m * 1000 + u * 100 + h * 10 + a;
+                                        int slon = s * 1000 + l * 100 + o * 10 + n;
+
+                                        if (3 * muha == slon)
+                                        {
+                                            Console.WriteLine($"M = {m}, U = {u}, H = {h}, A = {a}");
+                                            Console.WriteLine($"S = {s}, L = {l}, O = {o}, N = {n}");
+                                            Console.WriteLine($"MUHA + MUHA + MUHA = SLON: {muha} + {muha} + {muha} = {slon}");
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
